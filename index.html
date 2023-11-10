@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rumah Sederhana</title>
+  <style>
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .house {
+      width: 300px;
+      height: 150px;
+      background-color: red;
+      position: absolute;
+      top: 63%;
+      left: 50%;
+    }
+
+    .roof {
+      width: 200px;
+      height: 0;
+      border-left: 100px solid transparent;
+      border-right: 100px solid transparent;
+      border-bottom: 100px solid #8b4513;
+      position: absolute;
+      top: -100px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .door {
+      width: 40px;
+      height: 90px;
+      background-color: #8b4513;
+      position: absolute;
+      bottom: 0;
+      left: 20%;
+      transform: translateX(-50%);
+    }
+
+    .doorknob {
+      width: 10px;
+      height: 10px;
+      background-color: #f2f2f2;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .window {
+      width: 60px;
+      height: 60px;
+      background-color: #87ceeb;
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .window::before {
+      content: "";
+      width: 40px;
+      height: 2px;
+      background-color: #f2f2f2;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
+
+    .window::after {
+      content: "";
+      width: 2px;
+      height: 40px;
+      background-color: #f2f2f2;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
+   
+/* matahari */
+    .sun {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 5%;
+        left: 10%;
+        border-radius: 50%;
+        background: radial-gradient(circle at center, #ffcc00 0%, #ff9900 100%);
+        box-shadow: 0 0 50px #ffcc00, 0 0 100px #ffcc00, 0 0 150px #ffcc00, 0 0 200px #ffcc00;
+    }
+    .cloud {
+        width: 200px;
+        height: 100px;
+        position: absolute;
+        top: 5%;
+        left: 40%;
+        border-radius: 50%;
+        background-color: #fff;
+    }
+     /* taman */
+    .taman {
+        width: 100%;
+        height: 200px;
+        position: absolute;
+        top: 80%;
+        z-index: -3;
+        background-color:green;
+    }
+    /* pohon */
+    .tree {
+        width: 100px;
+        height: 200px;
+        position: absolute;
+        top: -70%;
+        left: 80%;
+        }
+
+        .trunk {
+        width: 20px;
+        height: 100%;
+        background-color: #8b4513;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        }
+
+        .leaves {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: #228b22;
+        position: absolute;
+        top: -50%;
+        }
+        .box {
+            width: 100px;
+            height: 80px;
+            background-color: #ccc;
+            position: fixed;
+            bottom: 80%;
+            right: 10px;
+            border-radius: 5px;
+        }
+        
+  </style>
+</head>
+<body  style="background-color: #87ceeb;">
+    
+    <div class="container">
+    <div class="box"><center><h1 style="color: red;">100</h1></center></div>
+        <div class="cloud"></div>
+        <div class="cloud" style="margin-left: 75px"></div>
+        <div class="cloud" style="margin-left: 300px" ></div>
+        <div class="cloud" style="margin-left: 375px"></div>
+        <div class="sun"></div>
+        <div class="house">
+            <div class="roof"></div>
+                <div class="door">
+                    <div class="doorknob"></div>
+                </div>
+                <div class="window" ></div>
+                <div class="window" style="margin-left: 75px"></div>
+            </div>  
+        </div>
+    </div>
+    <div class="taman">
+        <div class="tree">
+            <div class="trunk"></div>
+            <div class="leaves"></div>
+        </div>
+    </div>
+</body>
+</html>
